@@ -10,9 +10,8 @@ export const useUserStore = defineStore({
   actions: {
     logout() {
       //TODO: implementar esto
-      this.name = "";
-      this.email = "";
-      this.favorites = [];
+      this.id= "";
+      this.accessToken= "";
     },
     /**
      * Attempt to login a user
@@ -20,13 +19,12 @@ export const useUserStore = defineStore({
      */
     async login(id, accessToken) {
       //TODO: implementar esto
-      this.id = id;
-      this.accessToken = accessToken;     
+      this.id = id; 
+      this.accessToken = accessToken;
     },
     isAuthenticated() {
       //TODO: implementar esto
       return this.id !== "";
-
     },
   },
 });

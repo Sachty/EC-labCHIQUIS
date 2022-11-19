@@ -20,14 +20,12 @@ export const useUserStore = defineStore({
      */
     async login(id, accessToken) {
       //TODO: implementar esto
-      this.name = user;
-      this.email = this.name + "@utec.edu.pe";
-      this.favorites = JSON.parse(localStorage.getItem(this.name)) || [];
+      this.id = id;
+      this.accessToken = accessToken;
     },
     isAuthenticated() {
       //TODO: implementar esto
-      return this.name !== "";
-
+      return this.id !== "";
     },
   },
 });

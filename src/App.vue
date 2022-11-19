@@ -22,9 +22,7 @@ router.beforeEach((to, from, next) => {
   const userStore = useUserStore();
   if (to.name === "logout" && userStore.isAuthenticated()) {
     //TODO: Implementar.
-    !userStore.isAuthenticated() && to.name !== "login"
-    ? next({ name: "login" })
-    : next();
+    
 
   }
   if (to.name === "loginCallback" && Object.keys(to.query).length) {

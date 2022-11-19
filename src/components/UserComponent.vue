@@ -6,5 +6,13 @@ export default {
 </script>
 
 <template>
-  {{ /*TODO: rellenar la pagina con los datos del usuario */}}
+  <main>
+    <div class="user">
+      <img class="image" width="200" height="200" :src="img" />
+      <div class="info">
+        <p class="name">{{ displayName }}</p>
+        <p class="followers">{{ followers }} followers</p>
+      </div>
+    </div>
+  </main>
 </template>

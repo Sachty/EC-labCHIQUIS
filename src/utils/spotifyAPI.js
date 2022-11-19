@@ -63,6 +63,16 @@ const getUser = () => {
 
 const getArtistAlbums = (id) => {
   //TODO: implementar esto. Utilizar la funcion getArtistAlbums del spotify API.
+  const userStore = useUserStore();
+  return spotifyApi.getArtistAlbums(userStore.id).then(
+    function (data) {
+      return data;
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
+  
 };
 
 const getUserPlaylists = () => {
@@ -79,6 +89,15 @@ const getUserPlaylists = () => {
 
 const getPlaylist = (id) => {
   //TODO: implementar esto. Utilizar la funcion getPlaylist del spotify API.
+  return spotifyApi.getPlaylist(userStore.id).then(
+    function (data) {
+      return data;
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
+
 };
 
 export default {

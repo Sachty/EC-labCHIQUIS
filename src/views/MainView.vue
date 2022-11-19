@@ -16,7 +16,11 @@ export default {
     },
     toMinutesAndSeconds(millis) {
       /* TODO: implementar esta funcion */
-      return "";
+      var min = Math.floor((millis/1000/60) << 0);
+      var sec = Math.floor((millis/1000) % 60);
+
+      var cadena = min + ':' + sec;
+      return cadena;
     },
   },
   data() {

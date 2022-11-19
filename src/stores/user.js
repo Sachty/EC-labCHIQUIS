@@ -10,6 +10,9 @@ export const useUserStore = defineStore({
   actions: {
     logout() {
       //TODO: implementar esto
+      this.name = "";
+      this.email = "";
+      this.favorites = [];
     },
     /**
      * Attempt to login a user
@@ -17,9 +20,14 @@ export const useUserStore = defineStore({
      */
     async login(id, accessToken) {
       //TODO: implementar esto
+      this.name = user;
+      this.email = this.name + "@utec.edu.pe";
+      this.favorites = JSON.parse(localStorage.getItem(this.name)) || [];
     },
     isAuthenticated() {
       //TODO: implementar esto
+      return this.name !== "";
+
     },
   },
 });

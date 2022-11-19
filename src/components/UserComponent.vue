@@ -7,4 +7,5 @@ export default {
 
 <template>
   {{ /*TODO: rellenar la pagina con los datos del usuario */}}
+  
 </template>

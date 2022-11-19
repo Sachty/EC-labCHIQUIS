@@ -19,7 +19,7 @@ export default {
   },
   async created() {
     //TODO: pass album id
-    const artistAlbums = await spotifyAPI.getArtistAlbums(undefined);
+    const artistAlbums = await spotifyAPI.getArtistAlbums(this.$route.params.id);
     this.albums = artistAlbums.items;
   },
 };

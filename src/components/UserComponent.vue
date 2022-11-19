@@ -8,9 +8,9 @@ export default {
 <template>
   <main>
     <div class="user">
-      <p class="name">{{ displayName }}</p>
+      <h1>{{ displayName }}</h1>
       <img class="image" width="200" height="200" :src="img" />
-      <p class="followers">{{ followers }} followers</p>
+      <h1>{{ followers }} followers</h1>
     </div>
   </main>
 </template>

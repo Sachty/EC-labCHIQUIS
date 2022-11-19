@@ -21,11 +21,12 @@ export const useUserStore = defineStore({
     async login(id, accessToken) {
       //TODO: implementar esto
       this.id = id;
-      this.accessToken = accessToken;
+      this.accessToken = accessToken;     
     },
     isAuthenticated() {
       //TODO: implementar esto
       return this.id !== "";
+
     },
   },
 });

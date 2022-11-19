@@ -28,8 +28,13 @@ export default {
 <template>
   <div class="main">
     <div class="albums-container">
-      {{/*TODO: Mandar los datos del album. Mira el componente para ver que se manda. Recuerda iterar porque son varios albums*/ }}
-      <ArtistAlbumComponent></ArtistAlbumComponent>
+      <ArtistAlbumComponent
+        v-for="album in albums" :key="album.id"
+            :name="album.name"
+            :tracks="album.total_tracks"
+            :img="album.images[0].url"
+            :date="album.release_date"
+          />
     </div>
   </div>
 </template>
